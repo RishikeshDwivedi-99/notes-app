@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+.main{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right bottom, rgb(195, 111, 186), rgb(100, 215, 247));
+  display: flex;
+}
+
+.box{
+  min-height: 100vh;
+  height: 100%;
+  max-width: 80vw;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10vh 0 0 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 20px;
+}
+
+.nav{
+  display: flex;
+  color: white;
+}
+
+.nav img{
+  width: 3.5rem;
+}
+
+button img{
+  width: 1.5rem;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem 1.4rem;
+  border: 0;
+  outline: none;
+  border-radius: 25px;
+  background-color: rgb(120, 40, 194);
+  color: white;
+  gap: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  max-width: 200px;
+}
+
+.flexNote{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 20px 10px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+.note textarea {
+  min-height: 170px;
+  min-width: 300px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  word-wrap: break-word;
+  padding: 0.6rem;
+  font-size: 1rem;
+  resize: none;
+  overflow-y: auto;
+}
+
+.note{
+  width: 310px;
+  max-width: 310px;
+  position: relative;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+.note textarea::-webkit-scrollbar {
+  width: 5px; 
+}
+.flexNote::-webkit-scrollbar{
+  width: 10px;
+}
+.flexNote::-webkit-scrollbar-thumb{
+
+  background-color: rgba(120, 40, 194, 0.7); 
+  border-radius: 10px; 
+}
+.note textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(120, 40, 194, 0.7); 
+  border-radius: 5px; 
+}
+.flexNote .note img{
+  position: absolute;
+  bottom: 2px;
+  right: 5px;
+  width: 40px;
+  padding: 8px;
+  cursor: pointer;
+}
+@media (max-width: 400px) {
+  .flexNote {
+    grid-template-columns: 1fr;
+
+  }
+  .flexNote::-webkit-scrollbar{
+    width: 5px;
+  }
+}
+
+@media screen and (max-width : 756px) {
+    .box{
+      align-items: center;
+    }
+}
+
+@media (max-width: 320px) {
+  .note {
+    width: 280px; /* Reduced width for smaller screens */
+    max-width: 280px;
+  }
+}
+
+
